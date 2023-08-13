@@ -4,8 +4,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>setup inicial</h1>
-      <Outlet/>
+      <h1>Github Finder</h1>
+      <Outlet />
     </>
   );
 }
