@@ -3,11 +3,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  color: white;
 }
 
 body {
   padding: 2rem;
   background-color: royalblue;
+}
+
+p {
   text-align: center;
-  color: white;
+}
+
+a {
+  text-decoration: none;
 }
