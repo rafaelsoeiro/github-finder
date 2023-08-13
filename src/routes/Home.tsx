@@ -23,7 +23,6 @@ export const Home = () => {
   };
   return (
     <div>
-      <h2>Home</h2>
       <Search loadUser={loadUser} />
       {user && <p>{user.login}</p>}
     </div>
