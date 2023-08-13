@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, KeyboardEvent } from "react";
 import { BsSearch } from "react-icons/bs";
 import classes from "./Searche.module.css";
 type SearchProps = {
@@ -8,6 +8,11 @@ type SearchProps = {
 export const Search = ({ loadUser }: SearchProps) => {
   const [username, setUsername] = useState("");
 
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      loadUser(username);
+    }
+  };
   return (
     <div className={classes.search}>
       <h2>Busque por um usuário</h2>
@@ -17,6 +22,7 @@ export const Search = ({ loadUser }: SearchProps) => {
           type="text"
           placeholder="Digite o nome do usuário"
           onChange={(e) => setUsername(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <button onClick={() => loadUser(username)}>
           <BsSearch />
